@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
+// const { Types: { ObjectId } } = Schema;
 
 const postsSchema = new mongoose.Schema({
     postId: {
-        // type : Schema.types.ObjectId
         type: Number,
         unique: true
     },
