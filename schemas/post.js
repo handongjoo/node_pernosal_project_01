@@ -19,6 +19,8 @@ const postsSchema = new mongoose.Schema({
     content: {
         type: String,
     },
+    
+    //시간은 어떻게 자동으로...
     createdAt: {
         type: Date,
         dafault: Date.now,
