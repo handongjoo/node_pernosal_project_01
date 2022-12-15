@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const connect = require("./schemas")
+connect();
 
 //post.js 모듈 사용
 const postRouter = require('./routes/post.js');
 
+app.use(express.json());
 app.use('/api', postRouter);
 
 app.get('/', (req, res) =>{
