@@ -1,11 +1,11 @@
 const express = require('express');
-const { createSecurePair } = require('tls');
 const router = express.Router();
 
 const Posts = require('../schemas/post.js')
 
 //게시글 작성
-//키 값을 필수 값 해제 해야만 됨
+//유니크값 해제 해야만 됨
+//postId에 ObjectId 타입을 못 넣어서 가져옴.
 router.post('/posts', async (req, res) => {
     const {postId, user, password, title, content} = req.body;
 
